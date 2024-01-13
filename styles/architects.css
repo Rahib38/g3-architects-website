@@ -132,6 +132,75 @@ main {
     line-height: 26px;
     /* 162.5% */
 }
+
+/*some facts*/
+.facts-container h2 {
+    color: #131313;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.facts-container p {
+    color: #727272;
+    font-weight: 400;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-container .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    padding: 30px;
+    text-align: center;
+}
+
+
+.card h2 {
+    color: #424242;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #727272;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+/*Sponsor*/
+
+.Sponsor-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.Sponsor-title h3 {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.sponsor-title p {
+    color: #727272;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sponsor-img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 /*mobile device responsive*/
 @media screen and (max-width: 576px) {
     header {
@@ -139,16 +208,29 @@ main {
 
     }
 
-    nav, .team-container {
+    nav,
+    .team-container,
+    .card-container,
+    .sponsor-img {
         flex-direction: column;
     }
-    .team-content {
+    .sponsor-img {
+        gap: 20px;
+    }
+
+    .team-content,
+    .card-container {
         padding-left: 20px;
-        padding-right: 30px;
+        padding-right: 20px;
         align-items: center;
     }
-    .team-container .team-img-container{
-        grid-template-columns:1fr;
+
+    .card-container {
+        gap: 10px;
+    }
+
+    .team-container .team-img-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -157,7 +239,16 @@ main {
         padding: 50px;
     }
 
-    nav, .team-container {
+    nav,
+    .team-container,
+    .sponsor-img {
         flex-direction: column;
+    }
+
+    .card-container {
+        gap: 10px;
+    }
+    .sponsor-img{
+        gap: 30px;
     }
 }
